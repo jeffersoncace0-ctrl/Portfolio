@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER AND NAVIGATION -->
+    <header>
+        <h1>Jefferson Cacerez</h1>
+        <nav>
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="pets.html">My Pets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ABOUT ME -->
+        <section id="about-me" class="card">
+            <h2>About Me</h2>
+
+            <img src="img/yo.jpeg" alt="Photo of Jefferson" class="img-sobre-mi">
+
+            <p id="texto-cambio">
+                Hello, nice to meet you. My name is <b>Jefferson Cacerez Fernández</b>, although I prefer to be called Jheff.
+
+                I come from a background where effort and self-improvement are essential, which has driven me to grow both personally and professionally.
+
+                I am currently a graduate in <b>Business Administration</b> and a student of Industrial Engineering, as well as a programmer in training at RIWI.
+
+                At RIWI, I am learning <b>Python, HTML, CSS, and JavaScript</b>, focused on web development.
+            </p>
+
+            <button id="btn-cambiar">Change Text</button>
+            <button id="btn-toggle">Show/Hide Content</button>
+
+            <p id="extra" style="display:none;">
+                I consider myself a strategic person, with an interest in continuous learning and the development of technological projects.
+            </p>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="card">
+            <h2>Projects at Riwi</h2>
+            <p>Journey as a <b><em>CODER AT RIWI</em></b>.</p>
+
+            <ul>
+                <li><a href="https://github.com/jeffersoncace0-ctrl/jeffersoncace0-ctrl" target="_blank">Project 1</a></li>
+                <li><a href="https://github.com/jeffersoncace0-ctrl/semanas-entregable-/tree/feature/1-codigo" target="_blank">Project 2</a></li>
+                <li><a href="https://github.com/jeffersoncace0-ctrl/CalculadoraDeNotas/tree/feature/3-codigo" target="_blank">Project 3</a></li>
+                <li><a href="https://google.com" target="_blank">Google</a></li>
+                <li><a href="https://www4.animeflv.net/" target="_blank">AnimeFLV</a></li>
+                <li><a href="https://moodle.riwi.io/my/" target="_blank">RIWI</a></li>
+            </ul>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="card">
+            <h2>Contact</h2>
+
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Name:</label>
+                    <input type="text" id="nombre" placeholder="Jefferson Cacerez..." minlength="3" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="yourmail@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Subject:</label>
+                    <textarea id="mensaje" rows="5" placeholder="Write your message here..."></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>2026 <b>RIWI</b></p>
+    </footer>
+        
+    <script src="script.js"></script>
+
+</body>
+</html>

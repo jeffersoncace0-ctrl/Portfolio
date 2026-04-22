@@ -1,0 +1,211 @@
+/* EXTERNAL FONT */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap');
+
+/* COLOR VARIABLES */
+:root {
+    --primary-color: #C9B6E4;
+    --secondary-color: #F7E7B3;
+    --background-color: #F6F1E6;
+    --white-color: #ffffff;
+    --button-color: #7A5C99;
+    --hover-color: #C0392B;
+    --font: "Fira Code", monospace;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    font-family: var(--font);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2C2C2C;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+    color: #2C2C2C;
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+/* TITLE */
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 
+        2px 2px 0 rgba(0,0,0,0.15),
+        4px 4px 0 rgba(0,0,0,0.10),
+        6px 6px 10px rgba(0,0,0,0.15);
+}
+
+/* NAVIGATION */
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2C2C2C;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--hover-color);
+}
+
+/* CONTENT */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
+}
+
+/* ABOUT ME */
+#about-me h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* IMAGE */
+.img-sobre-mi {
+    display: block;
+    margin: 1rem auto;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* CARDS */
+.card {
+    background: var(--white-color);
+    margin-bottom: 1.2rem;
+    padding: 1rem;
+    border-left: 6px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* PROJECTS */
+#projects ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 0;
+}
+
+#projects li {
+    background: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* FORM */
+input, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: var(--font);
+}
+
+/* BUTTONS */
+button {
+    background: var(--button-color);
+    color: var(--white-color);
+    padding: 0.6rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font);
+    border-radius: 6px;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: var(--hover-color);
+    transform: scale(1.05);
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+/* PET CARDS */
+.pet-card {
+    background: var(--white-color);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: 0.2s ease;
+}
+
+.pet-card:hover {
+    transform: scale(1.03);
+}
+
+/* IMAGES */
+.pet-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 14px;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    #projects ul {
+        grid-template-columns: 1fr;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    #projects ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
